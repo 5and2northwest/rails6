@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_08_224839) do
+ActiveRecord::Schema.define(version: 2022_04_08_230620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "characters", force: :cascade do |t|
+    t.string "first_name", limit: 150
+    t.string "last_name", limit: 150
+    t.string "alias", limit: 150
+    t.bigint "company_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_characters_on_company_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "name", limit: 150

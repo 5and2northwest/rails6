@@ -1,0 +1,7 @@
+.card
+  .card-header
+    %h1.card-title Listing Characters
+  .card-body
+    = render_datatable @datatable
+  .card-footer
+    = link_to 'New Character', new_character_path

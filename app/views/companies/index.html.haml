@@ -2,6 +2,6 @@
   .card-header
     %h1.card-title Listing companies
   .card-body
-    = render_datatable CompaniesDatatable.new
+    = render_datatable @datatable
   .card-footer
     = link_to 'New Company', new_company_path
