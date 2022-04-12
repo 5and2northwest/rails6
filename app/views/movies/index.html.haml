@@ -1,0 +1,7 @@
+.card
+  .card-header
+    %h1.card-title Listing Movies
+  .card-body
+    = render_datatable @datatable
+  .card-footer
+    = link_to 'New Movies', new_movie_path
