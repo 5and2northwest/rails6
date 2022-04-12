@@ -3,4 +3,5 @@ class Character < ApplicationRecord
 
     scope :dead, -> { where(dead: true) }
     scope :alive, -> { where(dead: false) }
+    scope :clark, -> { where(first_name: "Clark") }
 end

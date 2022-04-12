@@ -3,6 +3,7 @@ class CharacterDatatable < Effective::Datatable
         scope :all
         scope :alive, default: true
         scope :dead
+        scope :clark
     end
 
     datatable do

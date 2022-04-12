@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 2022_04_12_195153) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.string "studio"
-    t.string "release_date"
+    t.string "title", limit: 150
+    t.string "studio", limit: 150
+    t.string "release_date", limit: 150
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
