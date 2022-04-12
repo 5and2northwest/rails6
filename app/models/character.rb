@@ -1,4 +1,5 @@
 class Character < ApplicationRecord
+    validates_presence_of :based_from
     belongs_to :company
 
     scope :dead, -> { where(dead: true) }

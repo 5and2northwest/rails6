@@ -12,6 +12,7 @@ class CharacterDatatable < Effective::Datatable
       col :first_name
       col :last_name
       col :company
+      col :based_from
       col :dead
       col :created_at, visible: false
       col :updated_at, visible: false

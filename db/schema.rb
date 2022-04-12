@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_12_195153) do
+ActiveRecord::Schema.define(version: 2022_04_12_213540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2022_04_12_195153) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "dead", default: false
+    t.string "based_from", limit: 150
     t.index ["company_id"], name: "index_characters_on_company_id"
   end
 
@@ -33,9 +34,9 @@ ActiveRecord::Schema.define(version: 2022_04_12_195153) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title", limit: 150
-    t.string "studio", limit: 150
-    t.string "release_date", limit: 150
+    t.string "title"
+    t.string "studio"
+    t.string "release_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
