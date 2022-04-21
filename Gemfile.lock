@@ -266,6 +266,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   effective_datatables
+  effective_resources
   haml
   haml-rails
   jbuilder (~> 2.7)

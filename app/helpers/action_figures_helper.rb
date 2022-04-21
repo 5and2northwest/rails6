@@ -1,0 +1,2 @@
+module ActionFiguresHelper
+end
